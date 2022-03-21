@@ -14,6 +14,8 @@
 		02D39F3B27E3DAB900C0295F /* SimpleSwiftUICalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D39F3A27E3DAB900C0295F /* SimpleSwiftUICalculatorTests.swift */; };
 		02D39F4527E3DAB900C0295F /* SimpleSwiftUICalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D39F4427E3DAB900C0295F /* SimpleSwiftUICalculatorUITests.swift */; };
 		02D39F4727E3DAB900C0295F /* SimpleSwiftUICalculatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D39F4627E3DAB900C0295F /* SimpleSwiftUICalculatorUITestsLaunchTests.swift */; };
+		02D39F5427E3E83000C0295F /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D39F5327E3E83000C0295F /* CalculatorButton.swift */; };
+		02D39F5627E3F0C100C0295F /* ColorsExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D39F5527E3F0C100C0295F /* ColorsExt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		02D39F4027E3DAB900C0295F /* SimpleSwiftUICalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSwiftUICalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D39F4427E3DAB900C0295F /* SimpleSwiftUICalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUICalculatorUITests.swift; sourceTree = "<group>"; };
 		02D39F4627E3DAB900C0295F /* SimpleSwiftUICalculatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUICalculatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		02D39F5327E3E83000C0295F /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
+		02D39F5527E3F0C100C0295F /* ColorsExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,8 +100,10 @@
 			children = (
 				02D39F2927E3DAB500C0295F /* SimpleSwiftUICalculatorApp.swift */,
 				02D39F2B27E3DAB500C0295F /* ContentView.swift */,
+				02D39F5327E3E83000C0295F /* CalculatorButton.swift */,
 				02D39F2D27E3DAB900C0295F /* Assets.xcassets */,
 				02D39F2F27E3DAB900C0295F /* Preview Content */,
+				02D39F5527E3F0C100C0295F /* ColorsExt.swift */,
 			);
 			path = SimpleSwiftUICalculator;
 			sourceTree = "<group>";
@@ -258,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				02D39F2C27E3DAB500C0295F /* ContentView.swift in Sources */,
+				02D39F5627E3F0C100C0295F /* ColorsExt.swift in Sources */,
+				02D39F5427E3E83000C0295F /* CalculatorButton.swift in Sources */,
 				02D39F2A27E3DAB500C0295F /* SimpleSwiftUICalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
