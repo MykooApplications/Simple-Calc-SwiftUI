@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02B059B127F22A5E0078E7F3 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B059B027F22A5E0078E7F3 /* Calculator.swift */; };
 		02D39F2A27E3DAB500C0295F /* SimpleSwiftUICalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D39F2927E3DAB500C0295F /* SimpleSwiftUICalculatorApp.swift */; };
 		02D39F2C27E3DAB500C0295F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D39F2B27E3DAB500C0295F /* ContentView.swift */; };
 		02D39F2E27E3DAB900C0295F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D39F2D27E3DAB900C0295F /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02B059B027F22A5E0078E7F3 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		02D39F2627E3DAB500C0295F /* SimpleSwiftUICalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSwiftUICalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D39F2927E3DAB500C0295F /* SimpleSwiftUICalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSwiftUICalculatorApp.swift; sourceTree = "<group>"; };
 		02D39F2B27E3DAB500C0295F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,9 +103,10 @@
 				02D39F2927E3DAB500C0295F /* SimpleSwiftUICalculatorApp.swift */,
 				02D39F2B27E3DAB500C0295F /* ContentView.swift */,
 				02D39F5327E3E83000C0295F /* CalculatorButton.swift */,
+				02B059B027F22A5E0078E7F3 /* Calculator.swift */,
+				02D39F5527E3F0C100C0295F /* ColorsExt.swift */,
 				02D39F2D27E3DAB900C0295F /* Assets.xcassets */,
 				02D39F2F27E3DAB900C0295F /* Preview Content */,
-				02D39F5527E3F0C100C0295F /* ColorsExt.swift */,
 			);
 			path = SimpleSwiftUICalculator;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				02D39F2C27E3DAB500C0295F /* ContentView.swift in Sources */,
 				02D39F5627E3F0C100C0295F /* ColorsExt.swift in Sources */,
 				02D39F5427E3E83000C0295F /* CalculatorButton.swift in Sources */,
+				02B059B127F22A5E0078E7F3 /* Calculator.swift in Sources */,
 				02D39F2A27E3DAB500C0295F /* SimpleSwiftUICalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
