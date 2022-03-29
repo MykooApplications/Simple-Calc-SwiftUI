@@ -17,6 +17,8 @@ struct ContentView: View {
     
     @State var currentOperator : String = ""
     
+    @State var showsAlert = false
+    
     //var fistNumber: Double = 0
     //var lastNumber: Double = 0
     
@@ -65,8 +67,13 @@ struct ContentView: View {
                                         calcDisplayText = "7"
                                         calcDisplayNumber = 7
                                     } else {
-                                        calcDisplayText.append("7")
-                                        calcDisplayNumber = Double(calcDisplayText) ?? 0
+                                        if secondNumber == 0 {
+                                            
+                                        } else {
+                                            calcDisplayText.append("7")
+                                            calcDisplayNumber = Double(calcDisplayText) ?? 0
+                                        }
+                                        
                                     }
                                 }
                             }, label: {
@@ -91,8 +98,12 @@ struct ContentView: View {
                                         calcDisplayText = "4"
                                         calcDisplayNumber = 4
                                     } else {
-                                        calcDisplayText.append("4")
-                                        calcDisplayNumber = Double(calcDisplayText) ?? 0 //figure out error handle
+                                        if secondNumber == 0 {
+                                            
+                                        } else {
+                                            calcDisplayText.append("4")
+                                            calcDisplayNumber = Double(calcDisplayText) ?? 0
+                                        }
                                     }
                                 }
                             }, label: {
@@ -114,10 +125,15 @@ struct ContentView: View {
                                 } else {
                                     if calcDisplayText == "0" {
                                         calcDisplayText = "1"
-                                        calcDisplayNumber = 4
+                                        calcDisplayNumber = 1
                                     } else {
-                                        calcDisplayText.append("1")
-                                        calcDisplayNumber = Double(calcDisplayText) ?? 0 //figure out error handle
+                                        if secondNumber == 0 {
+                                            calcDisplayText = "1"
+                                            calcDisplayNumber = 1
+                                        } else {
+                                            calcDisplayText.append("1")
+                                            calcDisplayNumber = Double(calcDisplayText) ?? 0
+                                        }
                                     }
                                 }
                             }, label: {
@@ -137,6 +153,25 @@ struct ContentView: View {
                             //8 Number
                             Button(action: {
                                 print("Tapped on 8 button")
+                                if operatorActive {
+                                    if secondNumberText == "0" {
+                                        secondNumberText = "8"
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    } else {
+                                        secondNumberText.append("8")
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    }
+                                } else {
+                                    if calcDisplayText == "0" {
+                                        calcDisplayText = "8"
+                                        calcDisplayNumber = 8
+                                    } else {
+                                        calcDisplayText.append("8")
+                                        calcDisplayNumber = Double(calcDisplayText) ?? 0 //figure out error handle
+                                    }
+                                }
                             }, label: {
                                 NumberButton(btnTitle: "8")
                             })
@@ -144,6 +179,25 @@ struct ContentView: View {
                             //5 Number
                             Button(action: {
                                 print("Tapped on 5 Button")
+                                if operatorActive {
+                                    if secondNumberText == "0" {
+                                        secondNumberText = "5"
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    } else {
+                                        secondNumberText.append("5")
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    }
+                                } else {
+                                    if calcDisplayText == "0" {
+                                        calcDisplayText = "5"
+                                        calcDisplayNumber = 5
+                                    } else {
+                                        calcDisplayText.append("5")
+                                        calcDisplayNumber = Double(calcDisplayText) ?? 0 //figure out error handle
+                                    }
+                                }
                             }, label: {
                                 NumberButton(btnTitle: "5")
                             })
@@ -151,6 +205,25 @@ struct ContentView: View {
                             //2 Number
                             Button(action: {
                                 print("Tapped on 2 button")
+                                if operatorActive {
+                                    if secondNumberText == "0" {
+                                        secondNumberText = "2"
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    } else {
+                                        secondNumberText.append("2")
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    }
+                                } else {
+                                    if calcDisplayText == "0" {
+                                        calcDisplayText = "2"
+                                        calcDisplayNumber = 2
+                                    } else {
+                                        calcDisplayText.append("2")
+                                        calcDisplayNumber = Double(calcDisplayText) ?? 0 //figure out error handle
+                                    }
+                                }
                             }, label: {
                                 NumberButton(btnTitle: "2")
                             })
@@ -158,6 +231,23 @@ struct ContentView: View {
                             //0 Number
                             Button(action: {
                                 print("Tapped on 0 button")
+                                if operatorActive {
+                                    if secondNumberText == "0" {
+                                        return
+                                    } else {
+                                        secondNumberText.append("0")
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    }
+                                } else {
+                                    if calcDisplayText == "0" {
+                                        return
+                                    } else {
+                                        calcDisplayText.append("0")
+                                        calcDisplayNumber = Double(calcDisplayText) ?? 0 //figure out error handle
+                                    }
+                                }
+                                
                             }, label: {
                                 NumberButton(btnTitle: "0")
                             })
@@ -168,6 +258,25 @@ struct ContentView: View {
                             //9 Number
                             Button(action: {
                                 print("tapped on 9 button")
+                                if operatorActive {
+                                    if secondNumberText == "0" {
+                                        secondNumberText = "9"
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    } else {
+                                        secondNumberText.append("9")
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    }
+                                } else {
+                                    if calcDisplayText == "0" {
+                                        calcDisplayText = "9"
+                                        calcDisplayNumber = 9
+                                    } else {
+                                        calcDisplayText.append("9")
+                                        calcDisplayNumber = Double(calcDisplayText) ?? 0 //figure out error handle
+                                    }
+                                }
                             }, label: {
                                 NumberButton(btnTitle: "9")
                             })
@@ -175,6 +284,25 @@ struct ContentView: View {
                             //6 Number
                             Button(action: {
                                 print("tapped on 6  button")
+                                if operatorActive {
+                                    if secondNumberText == "0" {
+                                        secondNumberText = "6"
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    } else {
+                                        secondNumberText.append("6")
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    }
+                                } else {
+                                    if calcDisplayText == "0" {
+                                        calcDisplayText = "6"
+                                        calcDisplayNumber = 6
+                                    } else {
+                                        calcDisplayText.append("6")
+                                        calcDisplayNumber = Double(calcDisplayText) ?? 0 //figure out error handle
+                                    }
+                                }
                             }, label: {
                                 NumberButton(btnTitle: "6")
                             })
@@ -182,6 +310,25 @@ struct ContentView: View {
                             //3 Number
                             Button(action: {
                                 print("tapped on 3 button")
+                                if operatorActive {
+                                    if secondNumberText == "0" {
+                                        secondNumberText = "3"
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    } else {
+                                        secondNumberText.append("3")
+                                        secondNumber = Double(secondNumberText) ?? 0
+                                        calcDisplayText = secondNumberText
+                                    }
+                                } else {
+                                    if calcDisplayText == "0" {
+                                        calcDisplayText = "3"
+                                        calcDisplayNumber = 3
+                                    } else {
+                                        calcDisplayText.append("3")
+                                        calcDisplayNumber = Double(calcDisplayText) ?? 0 //figure out error handle
+                                    }
+                                }
                             }, label: {
                                 NumberButton(btnTitle: "3")
                             })
@@ -238,7 +385,13 @@ struct ContentView: View {
                         equals()
                     }, label: {
                         EnterButton()
-                    })
+                    }).alert(isPresented: self.$showsAlert) {
+                        Alert(
+                            title: Text("Error"),
+                            message: Text("Something went wrong"),
+                            dismissButton: .default(Text("Dissmiss")))
+
+                    }
                     
                 }
                 .frame(maxWidth: .infinity, maxHeight: 500)
@@ -319,8 +472,10 @@ struct ContentView: View {
             calcDisplayText = "\(calcDisplayNumber)"
             secondNumber = 0
         default:
+            showsAlert = true
             print("There was an error, infrom the user")
         }
+        currentOperator = ""
     }
     
     func allClear() {
