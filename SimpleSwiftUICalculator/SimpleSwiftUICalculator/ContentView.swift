@@ -24,9 +24,24 @@ struct ContentView: View {
     
     @State var operatorActive: Bool = false
     
+    @State var completeCalcHistoryArray = []
+    @State var completeCalcString = ""
+    
+    @State var calculationHistoryArray = []
+    @State var calculationHistoryString = ""
+    
+    @State var calculationDone : Bool = false
+    
+    
     var body: some View {
-        ZStack{
+        ZStack(alignment: .top){
+            Text(calculationHistoryString)
+                .font(.title)
+                .frame(width: 300,   alignment: .topTrailing)
+
+
             VStack{
+                Spacer()
                 // add textview to display user input
                 HStack {
                     Text(calcDisplayText)
@@ -34,7 +49,10 @@ struct ContentView: View {
                         .frame(height: 100, alignment: .trailing)
                         .frame(minWidth: 0, maxWidth: .infinity)
                 }
-                                
+                 
+                Spacer()
+                
+                
                 VStack {
                     Button(action: {
                         print("tapped on AC button")
@@ -112,6 +130,8 @@ struct ContentView: View {
                             
                             //1 Number
                             Button(action: {
+                                print("tapped 1")
+
                                 if operatorActive {
                                     if secondNumberText == "0" {
                                         secondNumberText = "1"
@@ -123,6 +143,9 @@ struct ContentView: View {
                                         calcDisplayText = secondNumberText
                                     }
                                 } else {
+                                    if calculationDone {
+                                        allClear()
+                                    }
                                     if calcDisplayText == "0" {
                                         calcDisplayText = "1"
                                         calcDisplayNumber = 1
@@ -136,6 +159,11 @@ struct ContentView: View {
                                         }
                                     }
                                 }
+                                calculationDone = false
+                                print("calcDisplayNumber = \(calcDisplayNumber)")
+                                print(calcDisplayText)
+                                print("second number = \(secondNumber)")
+                                print(secondNumberText)
                             }, label: {
                                 NumberButton(btnTitle: "1")
                             })
@@ -390,15 +418,24 @@ struct ContentView: View {
                             title: Text("Error"),
                             message: Text("Something went wrong"),
                             dismissButton: .default(Text("Dissmiss")))
-
                     }
-                    
                 }
-                .frame(maxWidth: .infinity, maxHeight: 500)
                 .frame(alignment: .bottom)
+                .frame(maxWidth: .infinity, maxHeight: 330)
                 .padding()
+                
+                
             }
+            
         }
+    }
+    
+    func addToCalculationHistory() {
+        
+    }
+    
+    func addToCompleteHistory(){
+        
     }
     
     
@@ -476,6 +513,7 @@ struct ContentView: View {
             print("There was an error, infrom the user")
         }
         currentOperator = ""
+        operatorActive = false
     }
     
     func allClear() {
