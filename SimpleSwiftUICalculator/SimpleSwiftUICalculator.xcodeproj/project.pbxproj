@@ -80,15 +80,41 @@
 		025F2F8727F5071100D33B6B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				02AD97DC2820520D00C3155B /* Texts */,
+				02AD97DB2820520500C3155B /* Buttons */,
+				02D39F2B27E3DAB500C0295F /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		025F2F8827F5071D00D33B6B /* New Group */ = {
+		025F2F8827F5071D00D33B6B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02B059B027F22A5E0078E7F3 /* Calculator.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		02AD97D82820242500C3155B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "New Group";
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		02AD97DB2820520500C3155B /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				02D39F5327E3E83000C0295F /* CalculatorButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		02AD97DC2820520D00C3155B /* Texts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Texts;
 			sourceTree = "<group>";
 		};
 		02D39F1D27E3DAB500C0295F = {
@@ -114,12 +140,10 @@
 		02D39F2827E3DAB500C0295F /* SimpleSwiftUICalculator */ = {
 			isa = PBXGroup;
 			children = (
-				025F2F8827F5071D00D33B6B /* New Group */,
+				025F2F8827F5071D00D33B6B /* Model */,
 				025F2F8727F5071100D33B6B /* Views */,
+				02AD97D82820242500C3155B /* ViewModel */,
 				02D39F2927E3DAB500C0295F /* SimpleSwiftUICalculatorApp.swift */,
-				02D39F2B27E3DAB500C0295F /* ContentView.swift */,
-				02D39F5327E3E83000C0295F /* CalculatorButton.swift */,
-				02B059B027F22A5E0078E7F3 /* Calculator.swift */,
 				02D39F5527E3F0C100C0295F /* ColorsExt.swift */,
 				02D39F2D27E3DAB900C0295F /* Assets.xcassets */,
 				02D39F2F27E3DAB900C0295F /* Preview Content */,
